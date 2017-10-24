@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>代理--订单查询</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="overflow:hidden;">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>订单查询</div>
+      <div class="panel-body">
+        <div class="ibox-content">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="firstname" class="col-sm-1 control-label">充值时间:</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="date"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">订单号:</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">商户ID:</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">订单状态:</label>
+              <div class="col-sm-2">
+                <select class= "form-control">
+                  <option>充值成功</option>
+                  <option>订单状态</option>
+                  <option>等待付款</option>
+                  <option>失败订单</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-1 control-label">截止时间:</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="date"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">充值卡号:</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">游戏账号:</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">充值方式:</label>
+              <div class="col-sm-2">
+                <select class= "form-control">
+                  <option value="">全部</option>
+                  <option value="">网上银行</option>
+                  <option value="">支付宝</option>
+                  <option value="">财付通</option>
+                  <option value="">微信</option>
+                  <option value="">支付宝扫码</option>
+                  <option value="">骏网一卡通</option>
+                  <option value="">盛大一卡通</option>
+                  <option value="">征途一卡通</option>
+                  <option value="">腾讯QQ币</option>
+                  <option value="">久游一卡通</option>
+                  <option value="">网易一卡通</option>
+                  <option value="">完美一卡通</option>
+                  <option value="">搜狐一卡通</option>
+                  <option value="">纵游一卡通</option>
+                  <option value="">天宏一卡通</option>
+                  <option value="">天下一卡通</option>
+                  <option value="">光宇一卡通</option>
+                  <option value="">移动充值卡</option>
+                  <option value="">联通充值卡</option>
+                  <option value="">电信充值卡</option>
+                </select>
+              </div>
+            </div>
+          </form>
+          <div class="text-center">
+           	  <button class="btn btn-primary" title="">
+            	  <span class="button-content">开始查询</span>
+       		  </button>
+              <button class="btn btn-danger" title="">
+            	  <span class="button-content">重置查询</span>
+       		  </button>
+           </div>
+        </div>
+        <p> 共 <b>1</b> 笔记录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;充值金额合计：<b>10.00</b> 元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商户收入合计：<b>9.60</b> 元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代理收入：<b>0.20</b> 元 </p>
+        <table class="table table-bordered table-hover text-center">
+          <thead style="background:#f5f5f6;">
+            <tr>
+              <th class="text-center">订单号</th>
+              <th class="text-center">商户ID</th>
+              <th class="text-center">所属分区</th>
+              <th class="text-center">充值方式</th>
+              <th class="text-center">金额</th>
+              <th class="text-center">商户</th>
+              <th class="text-center">代理</th>
+              <th class="text-center">充值时间</th>
+              <th class="text-center">订单状态</th>
+              <th class="text-center">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>B170323095850831</td>
+              <td>31205</td>
+              <td>神话初醒F1区</td>
+              <td>微信</td>
+              <td>10.00</td>
+              <td>9.60</td>
+              <td>0.20</td>
+              <td>2017-03-23 09:58:53</td>
+              <td style="color:#337ab7;">成功</td>
+              <td style="color:#d9534f;">扣除</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

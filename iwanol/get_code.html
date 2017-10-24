@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>获取代码</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery/jQuery-2.2.0.min.js"></script>
+    <script src="js/jquery.easyui.min.js"></script>
+</head>
+
+<body>
+<div class="rows" style="margin-bottom:0.8%;overflow:hidden;">
+    <div style="float:left;width:49.2%;">
+         <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i></div>
+                 <div class="panel-body">
+                     <div class="tag-l">
+            			  <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="firstname" class="col-sm-3 control-label">分组:</label>
+                                    	<div class="col-sm-4">
+                                        <select class= "form-control">
+                                            <option>所属分组</option>
+                                            <option>秦殇传Ⅲ</option>
+                                            <option>秦殇传Ⅲ团</option>
+                                        </select>
+                                   		</div>
+                                  </div>
+                                  <div class="form-group">
+                                        <label for="firstname" class="col-sm-3 control-label">充值站点：</label>
+                                        <div class="col-sm-5">
+                                            <select id="url" name="url" onchange="Changed()" class= "form-control">
+                                                <option value="http://dome.755pay.com">http://dome.755pay.com</option>
+                                                <option value="http://Online.755pay.com">http://Online.755pay.com</option>
+                                                <option value="http://return.755pay.com">http://return.755pay.com</option>
+                                                <option value="http://paly.vip.755pay.com">http://paly.vip.755pay.com</option>
+                                            </select>
+                                      	</div>
+                                 </div>
+                          </form>  
+                <div class="tag-style">选择漂浮图片样式</div>
+                <div class="sty">
+                    <ul>
+                    	<li><input type="radio" name="ico" class="photo" value="1" checked/>样式1</li>
+                        <li><input type="radio" name="ico" class="photo" value="2"/>样式2</li>
+                        <li><input type="radio" name="ico" class="photo" value="3"/>样式3</li>
+                        <li><input type="radio" name="ico" class="photo" value="4"/>样式4</li>
+                        <li><input type="radio" name="ico" class="photo" value="5"/>样式5</li>
+                        <li><input type="radio" name="ico" class="photo" value="6"/>样式6</li>
+                        <li><input type="radio" name="ico" class="photo" value="7"/>样式7</li>
+                        <li><input type="radio" name="ico" class="photo" value="8"/>样式8</li>
+                    </ul>
+                    <div class="images">
+                        <img id="pic1" src="img/1.gif"/>
+                        <img id="pic2" src="img/2.gif"/>
+                        <img id="pic3" src="img/3.gif"/>
+                        <img id="pic4" src="img/4.gif"/>
+                        <img id="pic5" src="img/5.gif"/>
+                        <img id="pic6" src="img/6.gif"/>
+                        <img id="pic7" src="img/7.gif"/>
+                        <img id="pic8" src="img/8.gif"/>
+                    </div>
+                    <div>
+                    	<input type="radio" name="jssty" checked value="float" class="jssty"/> 随机漂浮&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<input type="radio" name="jssty" value="dl" class="jssty"/> 对联漂浮&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="jssty" value="def" class="jssty"/> 普通样式
+                    </div>
+                    <br/>
+                    <form  role="form">
+                    	<div class="form-group">
+                             <label for="name">充值链接地址:</label>
+                        </div>
+                        <div class="form-group">
+                             <input id="PayUrl" name="PayUrl" type="text" value="http://dome.755pay.com/app/acquire/req?merid=30865" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                              <input type="button" class="btn btn-primary" value="复制链接" onclick="copyUrl()"/>&nbsp;<input type="button" class="btn btn-danger" value="下载多线路充值文件" onclick="Download()"/> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+		</div>	  
+    </div>
+</div>
+<div style="float:right;width:50%;">
+      <div class="panel panel-default">
+			<div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i></div>
+                 <div class="panel-body">
+                      <div class="pop-panel" style="position:relative;">   	        
+                            <form  role="form">
+                                <div class="form-group">
+                                    <label for="name">图片漂浮代码:</label>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="adv_code" class="form-control" rows="7"></textarea>
+                                </div> 
+                                <div class="form-group">
+                                    <input class="btn btn-primary" type="button" name="Submit" value="复制代码" onclick="CopyCode('adv_code');" />&nbsp;<input class="btn btn-danger" type="button" name="Submit" value="预览效果" onclick="Preview();"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">流量统计代码:</label>
+                                </div>
+                                <div class="form-group">
+                                    <a style="color:red;">使用说明：</a>复制该代码加入到网站首页底部的</body>前面即可。<br>
+                                    <a style="color:red;">代码功能：</a>统计玩家从哪个广告站进的您的网站,直接进入您网站的玩家不记录访问数据。
+                                </div> 
+                                <div class="form-group">
+                                    <textarea id="ips_code" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input class="btn btn-primary" type="button" name="Submit" value="复制代码" onclick="CopyCode('ips_code');"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">进入游戏人数代码:</label>
+                                </div>
+                                <div class="form-group">
+                                    <a style="color:red;">使用说明：</a>复制该代码加到登陆器右边广告页面底部的</body>前面即可。<br>
+                                    <a style="color:red;">代码功能：</a>统计玩家运行登陆器的次数。<br>
+                                    <a style="color:red;">主要作用：</a>统计从哪个广告站过来的玩家进入游戏最多。
+                                </div> 
+                                <div class="form-group">
+                                    <textarea id="gm_code" rows="3" class="form-control">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.755pay.com/svrscript/getantscript?u=30865&quot;&gt;&lt;/script&gt; </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input class="btn btn-primary" type="button" name="Submit" value="复制代码" onclick="CopyCode('gm_code');"/>
+                                </div>
+                            </form>
+            			</div>
+              		</div>
+            	</div>
+         	</div>
+		</div>
+<script>
+    var domain = "http://www.755pay.com";
+    var p = 1;
+    var sty = "float";
+    var merid = 30865;  
+    jQuery('.photo').bind('click', function () {
+        var c = jQuery(this).val();
+        jQuery('#pic' + p).hide();
+        jQuery('#pic' + c).show();
+        p = c;
+        SelectStyle();
+    });
+    jQuery('.jssty').bind('click', function () {
+        sty = jQuery(this).val();
+        SelectStyle();
+    });
+    jQuery('#pic' + p).show();
+    SelectStyle();
+    Changed();
+    function Download(){
+        var g = jQuery("#gid").val();
+        window.location.href='downpayurl?gid='+ g;
+    }
+    function Changed() {
+        var g = jQuery("#gid").val();
+        var url = jQuery("#url").val();
+        if (g > 0) {
+            jQuery("#PayUrl").val(url + "/app/acquire/req?gid=" + g);
+        }
+        else {
+            jQuery("#PayUrl").val(url + "/app/acquire/req?merid=" + merid);
+        }
+
+        var strJs = "<script>var sdata='" + domain + "/ips/ipsscript?u=" + merid + "&c='+escape(document.referrer);";
+        strJs += "document.write(unescape(\"" +  "%3Cscript src='\"+sdata+\"' type='text/javascript' %3E%3C/script%3E\"));";
+        strJs += "<\/script>";
+        jQuery('#ips_code').val(strJs);
+        SelectStyle();
+    }
+    function Preview() {
+        var code = document.getElementById("adv_code").value;
+        var s = "<html><head><title>广告</title>";
+        s += "<meta http-equiv=\"Content-Language\" content=\"zh-cn\" />";
+        s += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\" />";
+        s += "</head><body>";
+        s += code;
+        s += "</body></html>";
+        var hWnd = window.open("about:blank");
+        hWnd.document.open();
+        hWnd.document.write(s);
+    }
+    function CopyCode(tar) {
+        document.getElementById(tar).select();
+        document.execCommand("copy", null);
+        alert("复制成功!");
+    }
+    function copyUrl() {
+        var url = document.getElementById('PayUrl').value;
+        window.clipboardData.setData('text', url);
+        alert("复制成功!");
+    }
+    function SelectStyle() {
+        var js = "<scri" + "pt type=\"text/javascript\" src=\"" + "http://" + window.location.host + "/content/images/apmt/floating.js\"></scri" + "pt>";
+        var code = "";
+        var w = jQuery('#pic' + p).width();
+        var h = jQuery('#pic' + p).height();
+        var url = "http://" + window.location.host + "/popularize/show?gmid="+ merid + "&gid=" + jQuery("#gid").val() + "&url="+ jQuery("#url").val() + "&pcid=" + p;
+        switch (sty) {
+            case "float":
+                code = "<iframe allowTransparency=\"true\" scrolling=\"no\" ismove=\"auto\" fixuptype=\"float\" fixupwidth=\"5\" frameborder=\"0\" width=\"" + w + "\" height=\"" + h + "\" src=\"" + url + "\"></iframe>";
+                code += js;
+                break;
+            case "dl":
+                code = "<iframe allowTransparency=\"true\" scrolling=\"no\" fixuptype=\"dl\" style=\"left:5px\" fixupwidth=\"5\" frameborder=\"0\" width=\"" + w + "\" height=\"" + h + "\" src=\"" + url + "\"></iframe>";
+                code += "<iframe allowTransparency=\"true\" scrolling=\"no\" fixuptype=\"dl\" style=\"right:5px\" fixupwidth=\"5\" frameborder=\"0\" width=\"" + w + "\" height=\"" + h + "\" src=\"" + url + "\"></iframe>";
+                code += js;
+                break;
+            default:
+                code = "<iframe allowTransparency=\"true\" scrolling=\"no\" frameborder=\"0\" width=\"" + w + "\" height=\"" + h + "\" src=\"" + url + "\"></iframe>";
+                break;
+        }
+        document.getElementById("adv_code").value = code;
+    }
+</script>
+</body>
+</html>

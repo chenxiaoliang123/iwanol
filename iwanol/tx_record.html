@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>账户管理--提现记录</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="overflow:hidden;">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>提现记录</div>
+      <div class="panel-body">
+        <div class="ibox-content col-lg-8">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="firstname" class="col-sm-1 control-label">日期:</label>
+              <div class="col-sm-2">
+                <input class="form-control" type="date"/>
+              </div>
+              <div class="col-sm-2">
+                <input class="form-control" type="date"/>
+              </div>
+              <div class="col-sm-2">
+                <select class= "form-control">
+                  <option value="">当前状态</option>
+                  <option value="">等待审核</option>
+                  <option value="">等待付款</option>
+                  <option value="">已付款</option>
+                  <option value="">完成</option>
+                  <option value="">失败</option>
+                </select>
+              </div>
+              <div class="col-sm-1">
+                <button type="submit" class="btn btn-primary">开始查询</button>
+              </div>
+            </div>
+          </form>
+          </div>
+          <table class="table table-bordered table-hover text-center">
+            <thead style="background:#f5f5f6;">
+              <tr>
+                <th class="text-center">时间</th>
+                <th class="text-center">业务流水号</th>
+                <th class="text-center">提现金额</th>
+                <th class="text-center">手续费</th>
+                <th class="text-center">汇款金额</th>
+                <th class="text-center">银行</th>
+                <th class="text-center">收款人</th>
+                <th class="text-center">银行卡号</th>
+                <th class="text-center">状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2017-03-20 09:39:27</td>
+                <td>P17032009392774395</td>
+                <td>109.00</td>
+                <td>0.00</td>
+                <td>109.00</td>
+                <td>建设银行</td>
+                <td>兰亚</td>
+                <td>*****************63</td>
+                <td>完成</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

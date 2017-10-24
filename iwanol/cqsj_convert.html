@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>分区模板--传奇世界兑换模板</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="margin-bottom:0.8%;overflow:hidden;">
+  <div style="float:left;width:49.4%;">
+    <div style="height:630px;background-color:#fff;">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第一步</div>
+        <div class="panel-body" style="max-height:630px;overflow-y:scroll;">
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">模板名称：</th>
+              <td><input type="text" value="" />
+                &nbsp;5-16个字，请勿输入特殊符号</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">游戏币：</th>
+              <td><span>
+                <input checked="checked" cmd="GAMEGOLD +" text="元宝" type="radio" value="1" />
+                &nbsp;元宝</span>&nbsp;&nbsp; <span>
+                <input cmd="give金币" text="金币" type="radio" value="2" />
+                &nbsp;金币</span>&nbsp;&nbsp; <span>
+                <input cmd="" text="自定义" type="radio" value="0" />
+                &nbsp;自定义</span></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">游戏币名称：</th>
+              <td><input maxlength="16" style="width:80px" type="text" value="元宝" />
+                &nbsp;&nbsp;脚本命令：
+                <input maxlength="18" type="text" value="GAMEGOLD +" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">兑换比例：</th>
+              <td><input maxlength="8" style="width:80px" type="text" value="1" />
+                &nbsp;1元人民币可以兑换的游戏币数量</td>
+            </tr>
+          </table>
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">NPC名称：</th>
+              <td><input maxlength="18" type="text" value="元宝充值使者" />
+                &nbsp;游戏安全区NPC名称</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">地图：</th>
+              <td><input maxlength="8" size="5" type="text" value="3" />
+                &nbsp;&nbsp;X：
+                <input maxlength="5" size="5" type="text" value="343" />
+                &nbsp;&nbsp;Y：
+                <input maxlength="5" size="5" type="text" value="338" />
+                &nbsp;&nbsp;
+                <input type="button" value="删除" class="btn btn-primary" onclick="RemoveNpc(this)" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">地图：</th>
+              <td><input maxlength="8" size="5" type="text" value="0" />
+                &nbsp;&nbsp;X：
+                <input maxlength="5" size="5" type="text" value="332" />
+                &nbsp;&nbsp;Y：
+                <input maxlength="5" size="5" type="text" value="264" />
+                &nbsp;&nbsp;
+                <input type="button" value="删除" class="btn btn-primary" onclick="RemoveNpc(this)" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">地图：</th>
+              <td><input maxlength="8" size="5" type="text" value="" />
+                &nbsp;&nbsp;X：
+                <input maxlength="5" size="5" type="text" value="" />
+                &nbsp;&nbsp;Y：
+                <input maxlength="5" size="5" type="text" value="" />
+                &nbsp;&nbsp;
+                <input type="button" value="删除" class="btn btn-primary" onclick="RemoveNpc(this)" /></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><input type="button" value="添加" class="btn btn-danger" onclick="insertNpc()" /></td>
+            </tr>
+          </table>
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">游戏引擎：</th>
+              <td><select onchange="Selengine()">
+                  <option value="">选择引擎</option>
+                  <option value="Herom2">Herom2</option>
+                  <option value="3KM2">3KM2</option>
+                  <option value="Bluem2/Legendm2">Bluem2/Legendm2</option>
+                  <option value="Gameofmir">Gameofmir</option>
+                  <option value="MaxM2">MaxM2</option>
+                  <option value="">其它</option>
+                </select></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">浏览器指令：</th>
+              <td><input maxlength="18" type="text" value="" /></td>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td>不同的引擎打开浏览器的指令可能有差异，请查阅相关帮助文档</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:right;width:49.4%;">
+    <div style="height:630px;background-color:#fff;">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第二步</div>
+        <div class="panel-body" style="max-height:630px;overflow-y:scroll;">
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">选项：</th>
+              <td><span>
+                <input checked="checked" type="radio" value="0" />
+                &nbsp;关闭充值赠送</span>&nbsp;&nbsp; <span>
+                <input type="radio" value="1" />
+                &nbsp;按充值金额计算</span>&nbsp;&nbsp; <span>
+                <input type="radio" value="2" />
+                &nbsp;充值金额+激励赠送</span></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">网银赠送比例：</th>
+              <td><input type="text" style="width:40px" onkeyup="setdiscount(this, 'BankScale')" />
+                &nbsp;&nbsp;百分比(%)</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">网上银行：</th>
+              <td><input type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">支付宝：</th>
+              <td><input type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">财付通：</th>
+              <td><input type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">微信：</th>
+              <td><input type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">支付宝扫码：</th>
+              <td><input type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">点卡赠送比例：</th>
+              <td><input type="text" style="width:40px" onkeyup="setdiscount(this, 'DigestSale')" />
+                &nbsp;&nbsp;百分比(%)</td>
+            </tr>
+          </table>
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">骏网一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">盛大一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">征途一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">腾讯QQ币：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">久游一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">网易一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">完美一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">搜狐一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">纵游一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">天宏一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">天下一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">光宇一卡通：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">移动充值卡：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">联通充值卡：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+              <th style="text-align:right;">电信充值卡：</th>
+              <td><input style="width:40px" type="text" value="80" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rows" style="margin-bottom:0.8%;overflow:hidden;">
+  <div style="float:left;width:49.4%;">
+    <div style="height:350px;background-color:#fff;">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第三步</div>
+        <div class="panel-body" style="max-height:350px;overflow-y:scroll;">
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">选项：</th>
+              <td colspan="2"><input type="checkbox" value=" 1" />
+                &nbsp;开启激励赠送</td>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td>金额(元)</td>
+              <td>赠送金额(元)</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">充值：</th>
+              <td><input style="width:80px;" type="text" value="" /></td>
+              <td><input style="width:80px;" type="text" value="" />
+                &nbsp;&nbsp;
+                <input type="button" value="删除" class="btn btn-primary" onclick="removencourage(this)" /></td>
+            </tr>
+            <tfoot>
+              <tr>
+                <th>&nbsp;</th>
+                <td colspan="2"><input type="button" value="添加" class="btn btn-danger" onclick="addencourage()" /></td>
+              </tr>
+            </tfoot>
+          </table>
+          <br/>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:right;width:49.4%;">
+    <div style="height:350px;background-color:#fff;">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第四步</div>
+        <div class="panel-body" style="max-height:350px;overflow-y:scroll;">>
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">选项：</th>
+              <td><span>
+                <input checked="checked" type="radio" value="0" />
+                &nbsp;关闭装备赠送</span>&nbsp;&nbsp; <span>
+                <input type="radio" value="1" />
+                &nbsp;按充值金额计算</span>&nbsp;&nbsp; <span>
+                <input type="radio" value="2" />
+                充值金额+赠送金额</span></td>
+            </tr>
+          </table>
+          <table class="table table-bordered">
+            <tr>
+              <th>&nbsp;</th>
+              <td colspan="3"><span style=" color:red;">温馨提示:如需赠送多个装备,装备之间请用"+"分隔.例如:回城券+传送戒指</span></td>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td>金额(元)</td>
+              <td>脚本命令</td>
+              <td>赠送装备(输入装备和数量)</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">充值：</th>
+              <td><input maxlength="8" style="width:80px;" type="text" value="" /></td>
+              <td><input maxlength="28" style="width:80px;" type="text" value="Give" /></td>
+              <td><input maxlength="28" size="30" type="text" value="" />
+                <input type="button" value="删除" class="btn btn-primary" onclick="removemagic(this)" /></td>
+            </tr>
+            <tfoot>
+              <tr>
+                <th>&nbsp;</th>
+                <td colspan="3"><input type="button" value="添加" class="btn btn-danger" onclick="addmagic()" /></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rows" style="margin-bottom:0.8%;overflow:hidden;">
+  <div style="float:left;width:49.4%;">
+  <div style="height:500px;background-color:#fff;">
+  <div class="panel panel-default">
+    <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第五步</div>
+    <div class="panel-body" style="max-height:500px;overflow-y:scroll;">
+      <table class="table table-bordered">
+        <tr>
+          <th style="text-align:right;">选项：</th>
+          <td><span>
+            <input checked="checked" type="radio" value="0" />
+            关闭积分</span>&nbsp;&nbsp; <span>
+            <input type="radio" value="1" />
+            按充值金额计算</span>&nbsp;&nbsp; <span>
+            <input type="radio" value="2" />
+            充值金额+激励赠送</span></td>
+        </tr>
+      </table>
+      <table class="table table-bordered">
+        <tr>
+          <th></th>
+          <td>积分名称</td>
+          <td>显示</td>
+          <td>积分文件</td>
+          <td>比例</td>
+        </tr>
+        <tr>
+          <th style="text-align:right;">变量：</th>
+          <td><input type="text" value="消费积分" /></td>
+          <td><input type="checkbox" checked="checked" onclick="Changed(this)" />
+            <input type="hidden" value="1" /></td>
+          <td><input type="text" value="..\QuestDiary\充值积分\消费积分Save.txt" /></td>
+          <td><input type="text" value="1" />
+            <input type="button" value="删除" class="btn btn-primary" onclick="deleteIntegralrow(this)" /></td>
+        </tr>
+        <tr>
+          <th style="text-align:right;">变量：</th>
+          <td><input type="text" value="元宝消费" /></td>
+          <td><input type="checkbox" checked="checked" onclick="Changed(this)" />
+            <input type="hidden" value="1" /></td>
+          <td><input type="text" value="..\QuestDiary\充值积分\元宝消费Save.txt" /></td>
+          <td><input type="text" value="1" />
+            <input type="button" value="删除" class="btn btn-primary" onclick="deleteIntegralrow(this)" /></td>
+        </tr>
+        <tr>
+          <th style="text-align:right;">变量：</th>
+          <td><input type="text" value="" /></td>
+          <td><input type="checkbox" onclick="Changed(this)" />
+            <input type="hidden" value="0" /></td>
+          <td><input type="text" value="" /></td>
+          <td><input type="text" value="" />
+            <input type="button" value="删除" class="btn btn-primary" onclick="deleteIntegralrow(this)" /></td>
+        </tr>
+        <tfoot>
+          <tr>
+            <th>&nbsp;</th>
+            <td colspan="4"><input type="button" value="添加" class="btn btn-danger" onclick="insertIntegral()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  <div style="margin-left:30px; margin-top:10px;margin-bottom:20px;">
+  <button class="btn btn-success">
+  <span class="button-content">确定保存</span>
+  <btton>
+  </div>
+  </div>
+  </div>
+  <div style="float:right;width:49.4%;">
+    <div style="height:500px;background-color:#fff;">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="color:#FFF; background:#44b6ae;"><i class="fa fa-rss fa-lg" style="padding-right:5px;color:#FFF;"></i>第六步</div>
+        <div class="panel-body" style="max-height:500px;overflow-y:scroll;">
+          <table class="table table-bordered">
+            <tr>
+              <th style="text-align:right;">选项：</th>
+              <td colspan="3"><span>
+                <input checked="checked" type="radio" value="0" />
+                &nbsp;关闭附加赠送&nbsp;&nbsp;</span> <span>
+                <input type="radio" value="1" />
+                &nbsp;按充值金额计算&nbsp;&nbsp;</span> <span>
+                <input type="radio" value="2" />
+                &nbsp;充值金额+赠送金额&nbsp;&nbsp;</span></td>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <td>自定义名称</td>
+              <td>脚本命令</td>
+              <td>赠送比例</td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">金刚石：</th>
+              <td><input maxlength="18" type="text" value="金刚石" /></td>
+              <td><input maxlength="28" size="30" type="text" value="GAMEDIAMOND + " /></td>
+              <td><input maxlength="8" style="width:80px" type="text" value="" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">荣誉点：</th>
+              <td><input maxlength="18" type="text" value="荣誉点" /></td>
+              <td><input maxlength="28" size="30" type="text" value="CHANGEGLORY + " /></td>
+              <td><input maxlength="8" style="width:80px" type="text" value="" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">游戏点：</th>
+              <td><input maxlength="18" type="text" value="游戏点" /></td>
+              <td><input maxlength="28" size="30" type="text" value="GAMEPOINT + " /></td>
+              <td><input maxlength="8" style="width:80px" type="text" value="" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">灵符：</th>
+              <td><input maxlength="18" type="text" value="灵符" /></td>
+              <td><input maxlength="28" size="30" type="text" value="GAMEGIRD + " /></td>
+              <td><input maxlength="8" style="width:80px" type="text" value="" /></td>
+            </tr>
+            <tr>
+              <th style="text-align:right;">声望：</th>
+              <td><input maxlength="18" type="text" value="声望" /></td>
+              <td><input maxlength="28" size="30" type="text" value="CREDITPOINT + " /></td>
+              <td><input maxlength="8" style="width:80px" type="text" value="" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

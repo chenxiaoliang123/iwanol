@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>留言箱</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="rows">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>留言箱</div>
+        <div class="panel-body">
+          <div class="ibox-content"
+            <p><input type="button" value="清空留言" class="btn btn-danger"/></p>
+            <table class="table table-bordered table-hover text-center">
+              <thead style="background:#f5f5f6;">
+                <tr>
+                  <th class="text-center" style="vertical-align:middle;">编号</th>
+                  <th class="text-center" style="vertical-align:middle;">留言内容</th>
+                  <th class="text-center" style="vertical-align:middle;">日期</th>
+                  <th class="text-center" style="vertical-align:middle;">QQ</th>
+                  <th class="text-center" style="vertical-align:middle;">电话</th>
+                  <th class="text-center" style="vertical-align:middle;">邮箱</th>
+                  <th class="text-center" style="vertical-align:middle;">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="vertical-align:middle;">1</td>
+                  <td style="vertical-align:middle;"><a href="#" data-toggle="modal" data-target="#myModa1" class="btn btn-link">点击查看</a></td>
+                  <td style="vertical-align:middle;">2017-04-12&nbsp;15:46</td>
+                  <td style="vertical-align:middle;">9988776644</td>
+                  <td style="vertical-align:middle;">1301301567</td>
+                  <td style="vertical-align:middle;">1301301567@qq.com</td>
+                  <td><input type="button" value="删除" class="btn btn-danger"/></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="modal inmodal fade" id="myModa1" tabindex="-1" role="dialog"  aria-hidden="true">
+                               <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <p class="modal-title">留言内容</p>
+                                        </div>
+                                        <div class="modal-body">
+                                             <textarea class="form-control" rows="12">
+         深圳市爱玩在线网络科技有限公司成立于2013年，是一家以传奇网游为起点，集研发、运营为一体的综合性互联网公司。公司一直秉承以追求卓越的技术为导向，专注于为用户提供游戏、娱乐等优质的服务和产品，在业内拥有良好的口碑和形象。
+公司位于深圳市龙华区共和和丰大厦，目前公司员工有近10人，拥有规范的互联网公司管理体系、较强的创新能力和研发能力、专业的内容编辑团队以及经验丰富的营销团队，关注游戏产业每一个环节，致力于为中国整个游戏产业提供专业化服务。
+公司运营的主打品牌之一的《爱玩神途》是借鉴了动作RPG经典游戏暗黑破坏神的游戏界面和系统设定，推出的一款大型多人在线角色扮演游戏。该游戏具有战士、法师、道士和妖士四种职业，所有情节的发生、经验值取得以及各种打怪活动都是在网络上即时发生，玩家可以通过打怪来获得货币，利用货币进行贸易。整个游戏充满了魔力，具有东方色彩。
+                                             </textarea>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

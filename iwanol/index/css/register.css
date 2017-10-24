@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+body,span,ul,li,img,p,a,form,h1,h2,h3,h4{padding:0; margin:0; border:none;}
+html{ font-size: 62.5%;}
+body{font-family: 'hiragino sans gb','microsoft yahei';line-height:120%;font-size:14px;color: #666;background-color: #fff;}
+h1,h2,h3,h4{ font-weight:normal;}
+img, :link img, :visited img { border:none;}
+a,a img,input, textarea{text-decoration:none;color:#666;blr:expression(this.onFocus=this.blur());outline:none;}
+a { cursor:pointer; tcolor:#ececec;}
+.btnChroma{filter:chroma(color=#000000);}
+ul,li{list-style:none;}
+textarea{ resize:none;}
+
+/*.wrap{width:90%; margin:0 auto;}*/
+.aligncenter{margin:0 auto;}
+.w736{ width: 736px; }
+.w242{ width:242px; }
+.w150{width:150px;}
+.w300{ width:300px;}
+
+.left{float:left;}
+.right{float:right;}
+.clearfix{clear:both;}
+
+div:after {content: "";display: block;height: 0;clear: both;}
+ul:after,li:after{content: "";display: block;height: 0;clear: both;}
+a:hover{}
+
+.positionR{position:relative;}
+.positionA{position:absolute;}
+.positionF{position:fixed;}
+
+.displayN{display:none;}
+.displayB{display:block;}
+.displayIB{display:inline-block;}
+
+.bold-text{font-weight:600;}
+.red-txt{ color:red; font-weight:600;}
+.green-txt{color:green; font-weight:600;}
+.blue-txt{ color:#3273C5;}
+.fcc123_txt{color:#fcc123;}
+.f990000_txt{ color:#990000;}
+.fff45c_txt{ color:#fff45c;}
+.fff_txt{color:#fff;}
+.fff_83{ color:#838383;}
+.fff_F2{ color:#F2D578;}
+.f_d5{ color:#d54242;}
+.f_33{ color:#333;}
+
+.tr_ffffcc{ background-color:#ffffcc;}
+.c_f5c33e{ background-color:#f5c33e;}
+.c_fff{ background-color:#fff;}
+.c_99d5f9{ background-color:#99d5f9;}
+.c_ffa372{ background-color:#ffa372;}
+.c_fb94ff{ background-color:#fb94ff;}
+.c_f0621b{ background-color:#f0621b;}
+.c_666{ background-color:#666;}
+
+.align_left{text-align:left;}
+.align_center{text-align:center;}
+.align_right{text-align:right;}
+.clearfix{ clear:both;}
+
+.f12{ font-size:12px;}
+.f13{ font-size:13px;}
+.f18{font-size:18px;}
+.f20{ font-size:20px;}
+.f24{ font-size:24px;}
+/*margin*/
+.m_l40{ margin-left:40px;}
+.m_l20{margin-left:20px;}
+.m_b20{ margin-bottom:20px;}
+.m_t10{ margin-top:10px;}
+.m_t20{ margin-top:20px;}
+.m_tb10{ margin:10px 0px;}
+.bs { border:1px solid red;} 
+
+
+body{margin:0;padding:0;width:100%;height:100%;background-image:url(../images/regist_bg.png);background-repeat:no-repeat;background-size: 100% 100%;background-attachment: fixed;}
+/*上透明背景内容*/
+.naves{width:100%;height:81px;position:absolute;z-index:100;background:transparent; background-color:rgba(0,0,0,0.3);
+z-index:999; position:fixed; top:0; left:0;  _position:absolute;
+ _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible;}
+.snaves{width:1100px;margin:0 auto;}
+.logo{width:204px;height:66px; margin-top:4px;float:left; margin-left:5%;}
+.ejdh{width:580px;height:36px;margin-top:33px;float:left; margin-left:5%;}
+.btlo{ width:40px; height:20px; line-height:20px; text-align:center; border:1px solid #fff;margin-top:33px;float:right; margin-right:2px;}
+.btlo a{ color:#fff;}
+.btlo a:hover{ color:#0CF;}
+.nav li li a {display:inline-block;}
+.nav li li a {display:block;}
+.nav ul {list-style-type:none;margin:0;padding:0;}
+.nav ul li { float:left;line-height:24px;display:block;padding:0;margin:0; margin-left:30px;width:95px;}
+.nav ul li a {display:block;width:95px;height:24px;font-size:1.0625em;text-align:center;color:#FFF;text-decoration:none;}
+.nav ul table {width:100%;border-collapse:collapse;border:0;padding:0;margin:0;}
+.nav ul li ul {display:none;}
+.nav ul li:hover,.nav ul li a:hover,.nav ul li a:active {color:#FFF;background:transparent; background-color:rgba(17,175,234,0.3);}
+.nav ul li:hover ul,.nav ul li a:hover ul,.nav ul li a:active ul {display:block;width:100%;}
+.nav ul ul li {display:block;width:100%;border:none;}
+.nav ul ul li a{display:block;color:#FFF;border:none;}
+
+.juxing{border-radius:10px;background-color: white;margin:0 auto;width:550px; margin-top:140px;height:550px;overflow:hidden;}
+p{color:#323232;text-align: center;}
+
+.form-input {width:250px;color: #333;height: 30px;border: solid 1px #aca7a7;font-size: 14px;line-height: 30px;padding: 5px 12px;font-weight: bold;vertical-align: middle;}
+.form-inputs {width: 100px;color: #333;height: 30px;border: solid 1px #aca7a7;font-size: 14px;line-height: 30px;padding: 5px 12px;font-weight: bold;vertical-align: middle;}
+.bt {border: none;width: 150px;height: 38px;font-size: 14px;font-weight: bold;color: white;background-color: #f35606;}
+canvas{width:80px;height:30px; padding:4px; vertical-align: middle;z-index:0;background:#d2f0fb;border:none;}
+
+

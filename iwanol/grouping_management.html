@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>分组管理</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="rows">
+<div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>分组管理</div>
+      <div class="panel-body">
+        <div class="ibox-content">
+          <p><a data-toggle="modal" data-target="#myModal5"><input type="button" value="创建分组" class="btn btn-primary"/></a></p>
+          <table class="table table-bordered table-hover text-center">
+            <thead style="background:#f5f5f6;">
+              <tr>
+                <th class="text-center">编号</th>
+                <th class="text-center">分组名称</th>
+                <th class="text-center">分组网址</th>
+                <th class="text-center">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>111</td>
+                <td>22</td>
+                <td>http://wgongls.hsolgnwgn/wogl</td>
+                <td>
+                	<div class="dropdown"><a href="javascript:;" title="" data-toggle="dropdown"><span class="button-content"> <i class="glyph-icon font-size-11 glyphicon glyphicon-cog"></i> </span> </a>
+                        <ul class="dropdown-menu float-right">
+                          <li> <a href="javascript:;" title=""> <i class="glyphicon glyphicon-paperclip icon-edit mrg5R"></i> 充值 </a> </li>
+                          <li class="divider"></li>
+                          <li> <a href="get_code.html" title=""> <i class="glyphicon glyphicon-heart-empty icon-edit mrg5R"></i> 推广代码 </a> </li>
+                          <li class="divider"></li>
+                          <li> <a data-toggle="modal" data-target="#myModal6" class="font-red" title=""> <i class="glyphicon glyphicon-edit icon-remove mrg5R"></i> 编辑 </a> </li>
+                          <li class="divider"></li>
+                          <li> <a href="javascript:;" class="font-red" title=""> <i class="glyphicon glyphicon-remove-circle icon-remove mrg5R"></i> 删除 </a> </li>
+                        </ul>
+                  </div>
+               </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true"  data-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <p class="modal-title">创建分组</p>
+                </div>
+                <div class="modal-body"> 
+                  <form class="form-horizontal" role="form">
+                        <div class="form-group text-center">
+                             <label for="firstname" class="col-sm-2 control-label">分组名称:</label>
+                        <div class="col-sm-6">
+                             <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-3">
+                             <button type="submit" class="btn">确定保存</button>
+                        </div>
+                        </div>
+                   </form>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog"  aria-hidden="true"  data-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <p class="modal-title">编辑分组</p>
+                </div>
+                <div class="modal-body"> 
+                  <form class="form-horizontal" role="form">
+                        <div class="form-group text-center">
+                             <label for="firstname" class="col-sm-2 control-label">分组名称:</label>
+                        <div class="col-sm-6">
+                             <input type="text" class="form-control" value="秦殇传Ⅲ">
+                        </div>
+                        <div class="col-sm-3">
+                             <button type="submit" class="btn">确定保存</button>
+                        </div>
+                        </div>
+                   </form>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

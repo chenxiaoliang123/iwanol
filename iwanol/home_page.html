@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>首页</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/home_page.js"></script>
+</head>
+
+<body>
+<div class="rows" style="overflow:hidden;">
+<div style="float:left;width:100%;margin-right:0.8%;">
+<div class="panel panel-default">
+<div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>首页</div>
+<div class="panel-body">
+<div class="content">
+<div class="user-accounts">
+  <div class="user-col1">
+    <div class="user">
+      <div class="username">3284826<span>【代理商】</span></div>
+      <div>ID：30865</div>
+    </div>
+    <div class="dot-line"><a href="subscriber_data.html">基本资料</a><span class="sp">|</span><a href="login_password.html">登录密码</a><span class="sp">|</span><a href="tx_key.html" class="easyui-tooltip" title="网关通讯密匙">通讯密匙</a></div>
+  </div>
+  <div class="user-col2">
+    <ul>
+      <li class="first"><span>账户余额</span><span style="color:blue;font-size:18px;">50.33</span></li>
+      <li><span>冻结金额</span><span style="font-size:18px;">0.00</span></li>
+      <li><span>可提现金额</span><span style="color:red;font-size:18px;">50.33</span></li>
+      <li class="vline"><span>提现中金额</span><span style="color:green;font-size:18px;">0.00</span></li>
+      <li class="action"><a href="tx.html" title="提现金额不能小于100.00元" class="easyui-tooltip">提现</a><a href="tx_record.html">提现记录</a></li>
+    </ul>
+    <div class="dot-line">
+      <div class="s-notify"><a href="account_security.html" title="您可以限制登录账户的计算机IP" class="easyui-tooltip">账户安全</a><span class="sp">|</span><a href="js_rate.html">结算比率</a><span class="sp">|</span><a href="zh_income.html" class="easyui-tooltip" title="账户每日收入与支出情况">账户收支</a></div>
+    </div>
+  </div>
+</div>
+<div class="infos">
+  <ul class="report">
+    <li><span>今日充值</span><span>0.00</span></li>
+    <li><span>今日收入</span><span>0.00</span></li>
+    <li><span>分区数量</span><span>1</span></li>
+    <li><span class="easyui-tooltip" title="付款成功后，还未领取到元宝的订单">等待下发</span><span>1</span></li>
+    <li class="bnt-col">
+      <input type="button" onclick="PostWait()" value="立即发送" class="btn btn-primary" />
+    </li>
+  </ul>
+  <div class="dot-line">
+    <div class="notify">
+      <div id="mark">
+        <ul>
+           <li><a href="javascript:;" data-toggle="modal" data-target="#myModal6">公告：请各位商户重新下载网关，加载分区 [2017-01-21]</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="option-setting">
+  <div class="option-title">功能设置</div>
+  <div>
+    <ul class="option-box">
+      <li><span class="option-stop">游戏公告</span><span class="option-x-col2" id="qq">客服QQ或游戏公告</span><span class="option-x-col3"><a href="#" data-toggle="modal" data-target="#myModal5">设置</a><a href="#" class="font-gray"><span class="font-gray">删除</span></a></span></li>
+      <li><span class="option-runing">留言箱</span><span>玩家留言 0 条</span><span class="option-x-col3"><a href="javascript:;" onclick="Setleave('关闭留言箱')" class="easyui-tooltip" title="关闭留言箱功能">关闭</a><a href="leave_message.html" title="查看留言信息" class="easyui-tooltip">查看</a></span></li>
+      <li class="last"><span class="option-runing">皮肤设置</span><span class="option-x-col2">设置您的管理后台和充值网站皮肤</span><span class="option-x-col3"><a href="set_skins.html" title="设置皮肤" class="easyui-tooltip">设置</a></span></li>
+    </ul>
+  </div>
+</div>
+<div id="dlg"></div>
+<div class="table-box">
+  <div class="table-body">
+    <div class="title">最新充值订单</div>
+    <div class="query-table noborder">
+      <table class="table table-bordered table-hover orders-small">
+        <thead style="background:#f5f5f6;">
+          <tr class="heading">
+            <th>订单号</th>
+            <th>充值账号</th>
+            <th>所属分区</th>
+            <th>充值方式</th>
+            <th>充值金额</th>
+            <th>收入</th>
+            <th>充值时间</th>
+            <th>订单状态</th>
+            <th>发送状态</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="9" class="empty">暂无记录</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <p class="modal-title">游戏公告</p>
+      </div>
+      <div class="modal-body">
+        <form  role="form">
+          <div class="form-group" style="text-align:center;">
+            <label for="name">输入游戏公告或客服QQ，最多100个字</label>
+          </div>
+          <div class="form-group">
+            <input type="text" value="" class="form-control"/>
+          </div>
+          <div class="form-group" style="text-align:center;">
+            <input type="button" class="btn btn-primary" value="确定"/>
+            &nbsp;
+            <input type="button" class="btn btn-danger" value="取消"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <p class="modal-title"><strong>公告</strong></p>
+      </div>
+      <div class="modal-body">
+        <form  role="form">
+          <div class="form-group" style="text-align:center;">
+            <label for="name" style="font-size:16px;font-weight:500;margin-bottom:10px;">公告：请各位商户重新下载网关，加载分区</label><br/>
+            <label for="name">发布日期：2017-01-21 15:58:13</label>
+          </div>
+          <hr/>
+          <div class="form-group">
+            <p style="text-align:center;color:red;">重要公告：请各位商户重新加载分区 ！网站充值文件重新下载,解决域名报毒问题！！</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

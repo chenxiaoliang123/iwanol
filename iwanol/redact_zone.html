@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>分区管理</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="overflow:hidden;">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>编辑分区</div>
+      <div class="panel-body">
+        <div class="ibox-content col-lg-8">
+          <form class="form-horizontal" role="form">
+          <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-4">
+                <b>注意：</b>创建分区前请先把客户端运行起来。
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">分区名称:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">分组：</label>
+              <div class="col-sm-3">
+              <label class="checkbox-inline">
+                <input type="checkbox" value="433" name="Groups" />
+                秦殇传Ⅲ </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value="434" name="Groups" />
+                秦殇传Ⅲ团 </label>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">服务器IP:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-6">您的游戏服务器IP</div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">通讯端口:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">安装路径:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">模板:</label>
+              <div class="col-sm-2">
+                <select class= "form-control">
+                  <option>选择模板</option>
+                  <option>秦殇传Ⅲ</option>
+                </select>
+              </div>
+              <div class="col-sm-1">
+                <button type="submit" class="btn btn-primary">添加模板</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">元宝蛋：</label>
+              <label class="checkbox-inline">
+                <input checked type="radio" name="optionsRadiosinline" value="option1"/>
+                开启 </label>
+              <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline" value="option2"/>
+                关闭 </label>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">定时开区:</label>
+              <div class="col-sm-3">
+                <input class="form-control" type="date"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-6"> 系统将在您指定的时间开始提供充值服务 </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <label class="checkbox-inline">
+                <input checked type="radio" name="optionsRadiosinlines" value="option1"/>
+                不用更新脚本</label>
+              <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinlines" value="option2"/>
+                仅更新充值脚本</label>
+                <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinlines" value="option2"/>
+                全部更新</label>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-6"> <a style="color:red;">如果现在不需要更新脚本，您可以在分区管理中加载脚本</a> </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-6">
+                <input type="button" value="确定保存" class="btn btn-primary" onclick="save()" />
+                <input type="button" value="取消" class="btn btn-danger" onclick="javascript: window.location = '/servers/servicelist';" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

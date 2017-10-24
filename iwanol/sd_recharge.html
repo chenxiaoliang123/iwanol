@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>手动充值</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="margin-bottom:0.8%;overflow:hidden;">
+  <div style="float:left;width:49.2%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>手动补发</div>
+      <div class="panel-body">
+        <div class="tag-l">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">游戏账号:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">分区:</label>
+              <div class="col-sm-3">
+                <select class= "form-control">
+                  <option value="">所属分区</option>
+                  <option value="">所属分区</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-sm-3 control-label">充值金额:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">充值方式:</label>
+              <div class="col-sm-3">
+                <select class="form-control">
+                  <option value="">全部</option>
+                  <option value="">网上银行</option>
+                  <option value="">支付宝</option>
+                  <option value="">财付通</option>
+                  <option value="">微信</option>
+                  <option value="">支付宝扫码</option>
+                  <option value="">骏网一卡通</option>
+                  <option value="">盛大一卡通</option>
+                  <option value="">征途一卡通</option>
+                  <option value="">腾讯QQ币</option>
+                  <option value="">久游一卡通</option>
+                  <option value="">网易一卡通</option>
+                  <option value="">完美一卡通</option>
+                  <option value="">搜狐一卡通</option>
+                  <option value="">纵游一卡通</option>
+                  <option value="">天宏一卡通</option>
+                  <option value="">天下一卡通</option>
+                  <option value="">光宇一卡通</option>
+                  <option value="">移动充值卡</option>
+                  <option value="">联通充值卡</option>
+                  <option value="">电信充值卡</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label"></label>
+              <div class="col-sm-3">
+                <input type="checkbox" value="true" />
+                <input type="hidden" value="false" />
+                关闭赠送金额 </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-10">
+                <button type="submit" class="btn btn-primary">确定</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="float:right;width:50%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>整区补发</div>
+      <div class="panel-body">
+        <div class="pop-panel" style="position:relative;">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label"></label>
+              <div class="col-sm-6">
+                <p>注意：整区补发会将充值成功的订单再发送一次。</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-sm-3 control-label">分区:</label>
+              <div class="col-sm-3">
+                <select class="form-control">
+                  <option value="">所属分区</option>
+                  <option value="">所属分区</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">开始时间:</label>
+              <div class="col-sm-3">
+                <input class="form-control" type="date"/>
+              </div>
+              <label for="firstname" class="col-sm-1 control-label">至</label>
+              <div class="col-sm-3">
+                <input class="form-control" type="date"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">额外补发:</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control"/>
+              </div>
+              <div class="col-sm-3">
+                <label for="firstname" class="col-sm-1 control-label" style="margin-left:-40px;">%</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label"></label>
+              <div class="col-sm-2">
+                <input type="checkbox" value="true" />
+                <input type="hidden" value="false" />
+                不含赠送金额</div>
+              <div class="col-sm-3">
+                <input type="checkbox" value="true" />
+                <input type="hidden" value="false" />
+                额外补发仅补发元宝</div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-10">
+                <button type="submit" class="btn btn-primary">确定</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rows" style="overflow:hidden;">
+  <div style="float: left; width: 100%; margin-right: 0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>最近补发记录</p>
+        <table class="table table-bordered table-hover text-center">
+          <thead style="background:#f5f5f6;">
+            <tr>
+              <th class="text-center">流水号</th>
+              <th class="text-center">类别</th>
+              <th class="text-center">兑换分区</th>
+              <th class="text-center">兑换账号</th>
+              <th class="text-center">金额</th>
+              <th class="text-center">兑换时间</th>
+              <th class="text-center">操作员</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+            <tr>
+              <td>T160904190706558</td>
+              <td>手动充值</td>
+              <td>秦殇传--威震天下总区</td>
+              <td>zzt123</td>
+              <td>105.00</td>
+              <td>2016-09-04 19:07:06</td>
+              <td>3284826</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

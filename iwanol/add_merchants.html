@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>添加商户</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/verificationNumbers.js"></script>
+</head>
+
+<body onLoad="createCode();">
+<div class="rows" style="overflow:hidden;">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>添加商户</div>
+      <div class="panel-body">
+        <div class="col-lg-8 ibox-content">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">用户名:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-3">用户名由6-20个英文字母或数字组成
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">登录密码:</label>
+              <div class="col-sm-3">
+                <input type="password" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-3">密码由6-20个英文字母、数字或下划线组成
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">确认登录密码:</label>
+              <div class="col-sm-3">
+                <input type="password" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">联系人:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">联系QQ:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">联系电话:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">网站名称:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">域名:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">用户分组:</label>
+              <div class="col-sm-2">
+                <select class= "form-control">
+                  <option>[5]默认</option>
+                  <option>[6]新</option>
+                  <option>[7]默认</option>
+                  <option>[8]血染</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label">验证码:</label>
+              <div class="col-sm-2">
+                <input type="text" id="J_codetext" maxlength="4" class= "form-control"/>
+              </div>
+              <div class="col-sm-1">
+                <canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+              </div>
+              <!--<input type="button" value="验证码核验" class="btn btn-danger"
+				onClick="validate();">-->
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-2">看不清,请点击图片重新生成</div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-6">
+                <input type="button" value="确定保存" class="btn btn-primary" onclick="save()" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

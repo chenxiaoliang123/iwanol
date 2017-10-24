@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>账户管理--账户安全</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="rows" style="overflow:hidden;">
+  <div style="float:left;width:100%;margin-right:0.8%;">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-rss fa-lg" style="padding-right:5px;"></i>账户安全</div>
+      <div class="panel-body">
+        <div class="ibox-content col-lg-8">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-3">
+                <input id="CheckIP" name="CheckIP" type="checkbox" value="true" />
+                <input name="CheckIP" type="hidden" value="false" />
+                限制登录账户的计算机IP </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-5">
+                <p>请确保你的计算机在公网拥有固定输入的IP，而不是动态分配的，如ADSL</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label">授权IP:</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" value="116.24.93.220"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-sm-2 control-label"></label>
+              <div class="col-sm-3">
+                <p>多个IP请用","分割</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">确定保存</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
